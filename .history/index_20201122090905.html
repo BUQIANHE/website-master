@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTER</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- js -->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/other.js"></script>
+
+
+</head>
+<body>
+  
+  <!-- header nav  -->
+  <header class="header">
+    <div class="hd_inner">
+      <ul class="hd_cont flex-sb mwid hei">
+        <a href="index.html" class="hd_logo hei"><img src="images/logo.png" alt="logo"></a>
+        <nav class="top_nav flex wid hei">
+          <li class="nav_list"><a href="" class="ttu">Profile</a></li>
+          <li class="nav_list has_dp">
+            <a href="" class="ttu">workstation <i class="iconfont icon-down"></i></a>
+            <ul class="nav_drop_dowm">
+              <li class="dp_list"><a href="product.html">Monitor Mounts </a></li>
+              <li class="dp_list"><a href="product.html">Workstation </a></li>
+              <li class="dp_list"><a href="product.html">Stand Riser</a></li>
+              <li class="dp_list"><a href="product.html">Electric Height Adjustable Desk</a></li>
+            </ul>
+          </li>
+          <li class="nav_list has_dp"><a href="" class="ttu">Houseware <i class="iconfont icon-down"></i></a></li>
+          <li class="nav_list"><a href="news.html" class="ttu">News</a></li>
+          <li class="nav_list"><a href="support.html" class="ttu">Support</a></li>
+          <li class="nav_list"><a href="download.html" class="ttu">Downland</a></li>
+          <li class="nav_list"><a href="contact.html" class="ttu">Contact</a></li>
+        </nav>
+        <div class="top_links flex-sb hei">
+          <a href="mailto:" class="top_email_btn hei"><i class="iconfont icon-youxiangicon"></i></a>
+          <a class="top_search_btn hei">
+            <i class="iconfont icon-search"></i>
+            <form action="" class="search_form  ">
+              <div class="flex label_box">
+                <input type="text" name="keywords" id="keywords">
+                <button type="button" class="search_btn">GO</button>
+              </div>
+            </form>
+          </a>
+          <a class="top_menu_btn hei"><i class="iconfont icon-menu"></i></a>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <!-- banner -->
+  <div class="banner_box">
+
+    <!-- banner slider -->
+    <div class="swiper-container-ban flex-sb">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ban_list flex">
+          <!-- <div class=""> -->
+            <a href="" class="ban"><img src="images/banner.jpg" alt=""></a>
+            <div class="ban_info_box">
+              <h3 class="ttu">MASTER-MOUNT</h3>
+              <p class="ttu">Using innovative design and outstanding safety features, <br>
+                our mounts allow you to find the perfect position <br>
+                for all of your AV needs.</p>
+              <a href="" class="ban_btn ttu">Read more</a>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ban_list flex">
+          <!-- <div class=""> -->
+            <a href="" class="ban"><img src="images/banner.jpg" alt=""></a>
+            <div class="ban_info_box">
+              <h3 class="ttu">MASTER-MOUNT</h3>
+              <p class="ttu">Using innovative design and outstanding safety features, <br>
+                our mounts allow you to find the perfect position <br>
+                for all of your AV needs.</p>
+              <a href="" class="ban_btn ttu">Read more</a>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ban_list flex">
+          <!-- <div class=""> -->
+            <a href="" class="ban"><img src="images/banner.jpg" alt=""></a>
+            <div class="ban_info_box">
+              <h3 class="ttu">MASTER-MOUNT</h3>
+              <p class="ttu">Using innovative design and outstanding safety features, <br>
+                our mounts allow you to find the perfect position <br>
+                for all of your AV needs.</p>
+              <a href="" class="ban_btn ttu">Read more</a>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination-ban flex"></div>
+  </div>
+  <script>
+
+    var swiper_ban = new Swiper('.swiper-container-ban', {
+
+      autoplay:true,
+
+      pagination: {
+
+        el: '.swiper-pagination-ban',
+
+        clickable: true,
+
+      },
+
+    });
+
+  </script>
+
+  <!-- product menu -->
+  <div class="pro_line">
+    <h4 class="ttu flex">Our product line</h4>
+    <div class="pline_box">
+      <ul class="pline_items flex-sb mwid swiper-container-menu">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic1.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Monitor Mounts</a><b>→</b></h5>
+              <p>Our expertise and dedication are your guarantee<br>
+                quality and reliability</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic2.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Workstation</a><b>→</b></h5>
+              <p>Spending long hours sitting in the office at the same 
+                <br>
+                fixed position can definitely cause pain</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic3.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Stand Riser</a><b>→</b></h5>
+              <p>with an adjustable laptop stand, help you from 
+                <br>
+                neck strain to backaches.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic4.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Electric Height Adjustable Desk</a><b>→</b></h5>
+              <p>using an electric height adjustable desk will help 
+                <br>
+                you keep energetic and improve your work</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic1.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Monitor Mounts</a><b>→</b></h5>
+              <p>Our expertise and dedication are your guarantee<br>
+                quality and reliability</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic2.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Workstation</a><b>→</b></h5>
+              <p>Spending long hours sitting in the office at the same 
+                <br>
+                fixed position can definitely cause pain</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic3.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Stand Riser</a><b>→</b></h5>
+              <p>with an adjustable laptop stand, help you from 
+                <br>
+                neck strain to backaches.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide pline_list">
+            <a href=""><img src="images/pic4.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Electric Height Adjustable Desk</a><b>→</b></h5>
+              <p>using an electric height adjustable desk will help 
+                <br>
+                you keep energetic and improve your work</p>
+            </div>
+          </div>
+        </div>
+      </ul>
+
+      <!-- 滚动条 -->
+      <div class="swiper-scrollbar-menu"></div>
+    </div>
+  </div>
+  <script>
+    
+    var swiper_menu = new Swiper('.swiper-container-menu', {
+
+      slidesPerView: 4,
+
+      spaceBetween: 28,
+
+      scrollbar: {
+        el: '.swiper-scrollbar-menu',
+        hide: false,
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        450: {
+          slidesPerView: 2,
+        },
+        650: {
+          slidesPerView: 3,
+        },
+        1024: {  //屏幕尺寸大于1024 显示6个模块
+          slidesPerView: 4,
+          spaceBetween: 28
+        },
+      }
+    });
+
+  </script>
+
+  <!-- progarm -->
+  <div class="program_box wid">
+    <h4 class="ttu flex cen">PROFESSIONAL ERGONOMIC MOUNTING <br> SOLUTION PROVIDER FOR HOME &OFFICE</h4>
+    <p class="program_desc cen">We specialize in design and manufacturing of TV Mounts, <br> Flat Screen Mounts, Audio/Visual Equipment Mounts and Mounting related accessories.</p>
+    <p class="program_desc cen">We are certified ISO9001:2000 Quality System manufacturer that produces <br> quality products and to serve our customers better.</p>
+
+    <a href="" class="read_more"><span class="ttu">Read more</span> <b>→</b></a>
+
+  </div>
+
+  <!-- choose -->
+  <div class="choose_box flex-sb">
+    <section class="sec_choose mwid">
+      <header class="choose_hd wid">
+        <h4 class="ttu">Why Choose MASTER MOUNT</h4>
+        <p>Our expertise and dedication are your guarantee of quality and reliability</p>
+      </header>
+
+      <div class="swiper-button-next-choose iconfont icon-left"></div>
+      <ul class="choose_items wid flex-sb swiper-container-choose">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide choose_list">
+            <a href=""><img src="images/pic5.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Assembly</a></h5>
+              <p>Our expertise and dedication are your guarantee<br>
+                quality and reliability</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide choose_list">
+            <a href=""><img src="images/pic6.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Stamping</a></h5>
+              <p>Our expertise and dedication are your guarantee<br>
+                quality and reliability</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide choose_list">
+            <a href=""><img src="images/pic7.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">Laser Cutting</a></h5>
+              <p>Our expertise and dedication are your guarantee<br>
+                quality and reliability</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide choose_list">
+            <a href=""><img src="images/pic8.jpg" alt=""></a>
+            <div class="pline_info">
+              <h5 class="ttu flex"><a href="" class="fhd1">ODM</a></h5>
+              <p>Our expertise and dedication are your guarantee<br>
+                quality and reliability</p>
+            </div>
+          </div>
+        </div>
+      </ul>
+      <div class="swiper-button-prev-choose iconfont icon-right"></div>
+
+    </section>
+  </div>
+  <script>
+    
+    var swiper_choose = new Swiper('.swiper-container-choose', {
+
+      slidesPerView: 4,
+
+      spaceBetween: 30,
+
+      navigation: {
+        nextEl: '.swiper-button-next-choose',
+        prevEl: '.swiper-button-prev-choose',
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        450: {
+          slidesPerView: 2,
+        },
+        650: {
+          slidesPerView: 3,
+        },
+        1024: {  //屏幕尺寸大于1024 显示6个模块
+          slidesPerView: 4,
+          spaceBetween: 30
+        },
+      }
+
+    });
+
+  </script>
+  
+
+</body>
+</html>

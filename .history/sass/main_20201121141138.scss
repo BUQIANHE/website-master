@@ -1,0 +1,242 @@
+@import "_var.scss";
+//@import "_iconfont.scss";
+@import "_font.scss";
+@import "_reset.scss";
+@import "_common.scss";
+@import "_include.scss";
+
+@import url(https://at.alicdn.com/t/font_1714665_dvpup4mp2ss.css);
+
+
+/* header css */
+.header{
+  @extend .rel;
+  z-index: 666;
+
+  .hd_inner{
+    @extend .fix;
+    height: 80px;
+    width: $width;
+    background: transparent;
+
+    &.active{
+      background: $bk;
+    }
+  }
+
+  .hd_logo{
+    max-width: 115px;
+    img{
+      width: 115px;
+    }
+  }
+
+  .top_nav{
+
+    .nav_list{
+      @extend .hei;
+      @extend .flex;
+      @extend .rel;
+      @extend .anim;
+
+      margin: 0 8px;
+      border-bottom: 1px solid transparent;
+
+      &:hover{
+        background: $red;
+
+        >a{
+          color: $wt;
+        }
+
+        .icon-down{
+          transform: rotate(180deg);
+        }
+
+      }
+      &.has_dp:hover{
+
+        border-color: $bk;
+
+        .nav_drop_dowm{
+          display: block;
+        }
+      }
+
+    }
+
+    a{
+      @extend .anim;
+
+      font-size: $fs2;
+      color: #fff;
+      font-family: $fm2;
+      padding: 10px;
+      
+      .iconfont{
+        @extend .anim;
+
+        font-size: $fs2;
+        margin-left: 4px;
+      }
+    }
+
+    .nav_drop_dowm{
+      @extend .abs;
+      @extend .anim2;
+      top: calc( 100% + 1px);
+      left: 0;
+      background: $red;
+      padding: 10px;
+      display: none;
+
+      a{
+        @extend .jfs;
+        @extend .ttu;
+        white-space: nowrap;
+        padding: 14px;
+      }
+    }
+  }
+
+  .top_links{
+    width: 120px;
+    flex-shrink: 0;
+
+    i.iconfont{
+      color: $wt;
+      font-size: 18px;
+    }
+
+    .top_menu_btn{
+      @extend .rad0;
+      background: $red;
+      width: 36px;
+      height: 36px;
+    }
+
+    .top_search_btn{
+      @extend .rel;
+    }
+
+    .search_form{
+      @extend .abs;
+      top: $width;
+      right: 0;
+      width: 300px;
+      height: 46px;
+      background: $red;
+      display: none;
+
+      .label_box{
+        @extend .rad5;
+        height: 28px;
+        width: 270px;
+        background: $wt;
+        margin: 9px auto;
+
+        input{
+          flex: 1;
+          padding-left: 12px;
+        }
+
+        button{
+          font-family: $fm6;
+          color: $red;
+          margin: 0 10px;
+        }
+      }
+
+    }
+  }
+}
+
+
+/* banner css */
+.banner_box{
+
+  .ban_list{
+    @extend .rel;
+
+    .ban_info_box{
+      @extend .abs;
+
+      background: url(../images/in_bg1.png)no-repeat center center/contain;
+
+      h3{
+        font-size: $fs9;
+        font-family: $fm6;
+        color: $wt;
+        margin-bottom: 1rem;
+      }
+
+      p{
+        @extend .cen;
+        font-size: $fs3;
+        font-family: $fm2;
+        color: $wt;
+      }
+    }
+
+  }
+}
+
+
+
+// .hd{
+//   height: 70px;
+//   @extend .rel;
+//   z-index: 999;
+//   .inner_hd{
+//     @extend .fix;
+//     height: 70px;
+//     width: $width;
+//     background: $wt;
+//     box-shadow: 0 2px 1px rgba(0,0,0,.1);
+//   }
+
+//   .list_logo{
+//     width: 150px;
+//   }
+//   .list_items{
+//     width: 750px;
+//     .list_nav{
+//       font-size: $fs;
+//       color: $clr3;
+//       &.list_detect{
+//         @include btn1;
+//       }
+//     }
+//     @media screen and (max-width: 1550px){
+//       width: 550px;
+//     }
+//     @media screen and (max-width: 767px){
+//       position: absolute;
+//       top: $width;
+//       left: 100%;
+//       width: $width;
+//       flex-direction: column;
+//       align-items: flex-start;
+//       padding: 20px 3%;
+//       background:$wt;
+//       @include anim2;
+//       a{
+//         padding: 10px 0;
+//       }
+//       &.move{
+//         left: 0;
+//       }
+//     }
+//   }
+//   .mob_ico{
+//     @extend .none;
+//     .iconfont{
+//       &:before{
+//         font-size: $fs5;
+//       }
+//     }
+//     @media screen and (max-width: 767px){
+//       display: $flex;
+//     }
+//   }
+// }

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASTER</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- js -->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/other.js"></script>
+
+
+</head>
+<body>
+  
+  <!-- header nav  -->
+  <header class="header">
+    <div class="hd_inner">
+      <ul class="hd_cont flex-sb mwid hei">
+        <a href="index.html" class="hd_logo hei"><img src="images/logo.png" alt="logo"></a>
+        <nav class="top_nav flex wid hei">
+          <li class="nav_list"><a href="" class="ttu">Profile</a></li>
+          <li class="nav_list has_dp">
+            <a href="" class="ttu">workstation <i class="iconfont icon-down"></i></a>
+            <ul class="nav_drop_dowm">
+              <li class="dp_list"><a href="product.html">Monitor Mounts </a></li>
+              <li class="dp_list"><a href="product.html">Workstation </a></li>
+              <li class="dp_list"><a href="product.html">Stand Riser</a></li>
+              <li class="dp_list"><a href="product.html">Electric Height Adjustable Desk</a></li>
+            </ul>
+          </li>
+          <li class="nav_list has_dp"><a href="" class="ttu">Houseware <i class="iconfont icon-down"></i></a></li>
+          <li class="nav_list"><a href="news.html" class="ttu">News</a></li>
+          <li class="nav_list"><a href="support.html" class="ttu">Support</a></li>
+          <li class="nav_list"><a href="download.html" class="ttu">Downland</a></li>
+          <li class="nav_list"><a href="contact.html" class="ttu">Contact</a></li>
+        </nav>
+        <div class="top_links flex-sb hei">
+          <a href="mailto:" class="top_email_btn hei"><i class="iconfont icon-youxiangicon"></i></a>
+          <a class="top_search_btn hei">
+            <i class="iconfont icon-search"></i>
+            <form action="" class="search_form  ">
+              <div class="flex label_box">
+                <input type="text" name="keywords" id="keywords">
+                <button type="button" class="search_btn">GO</button>
+              </div>
+            </form>
+          </a>
+          <a class="top_menu_btn hei"><i class="iconfont icon-menu"></i></a>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <!-- banner -->
+  <div class="banner_box">
+
+    <!-- banner slider -->
+    <div class="swiper-container-ban flex-sb">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ban_list flex">
+          <!-- <div class=""> -->
+            <a href="" class="ban"><img src="images/banner.jpg" alt=""></a>
+            <div class="ban_info_box">
+              <h3 class="ttu">MASTER-MOUNT</h3>
+              <p class="ttu">Using innovative design and outstanding safety features, <br>
+                our mounts allow you to find the perfect position <br>
+                for all of your AV needs.</p>
+              <a href="" class="ban_btn ttu">Read more</a>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ban_list flex">
+          <!-- <div class=""> -->
+            <a href="" class="ban"><img src="images/banner.jpg" alt=""></a>
+            <div class="ban_info_box">
+              <h3 class="ttu">MASTER-MOUNT</h3>
+              <p class="ttu">Using innovative design and outstanding safety features, <br>
+                our mounts allow you to find the perfect position <br>
+                for all of your AV needs.</p>
+              <a href="" class="ban_btn ttu">Read more</a>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ban_list flex">
+          <!-- <div class=""> -->
+            <a href="" class="ban"><img src="images/banner.jpg" alt=""></a>
+            <div class="ban_info_box">
+              <h3 class="ttu">MASTER-MOUNT</h3>
+              <p class="ttu">Using innovative design and outstanding safety features, <br>
+                our mounts allow you to find the perfect position <br>
+                for all of your AV needs.</p>
+              <a href="" class="ban_btn ttu">Read more</a>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination-ban flex"></div>
+  </div>
+  <script>
+
+    var swiper_ban = new Swiper('.swiper-container-ban', {
+
+      autoplay:true,
+
+      pagination: {
+
+        el: '.swiper-pagination-ban',
+
+        clickable: true,
+
+      },
+
+    });
+
+  </script>
+
+  <!-- product menu -->
+  <div class="pro_line">
+    <h4 class="ttu flex">Our product line</h4>
+    <div class="pline_box">
+      <ul class="pline_items flex-sb">
+        <li class="pline_list">
+          <a href=""><img src="images/pic1.jpg" alt=""></a>
+          <div class="pline_info">
+            <h5 class="ttu">Monitor Mounts  →</h5>
+            <p>Our expertise and dedication are your guarantee<br>
+              quality and reliability</p>
+          </div>
+        </li>
+        <li class="pline_list">
+          <a href=""><img src="images/pic2.jpg" alt=""></a>
+          <div class="pline_info">
+            <h5 class="ttu">Workstation  →</h5>
+            <p>Spending long hours sitting in the office at the same 
+              <br>
+              fixed position can definitely cause pain</p>
+          </div>
+        </li>
+        <li class="pline_list">
+          <a href=""><img src="images/pic3.jpg" alt=""></a>
+          <div class="pline_info">
+            <h5 class="ttu">Stand Riser  →</h5>
+            <p>with an adjustable laptop stand, help you from 
+              <br>
+              neck strain to backaches.</p>
+          </div>
+        </li>
+        <li class="pline_list">
+          <a href=""><img src="images/pic4.jpg" alt=""></a>
+          <div class="pline_info">
+            <h5 class="ttu">Electric Height Adjustable Desk  →</h5>
+            <p>using an electric height adjustable desk will help 
+              <br>
+              you keep energetic and improve your work</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+</body>
+</html>

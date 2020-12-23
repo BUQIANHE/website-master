@@ -1,0 +1,808 @@
+@import "_var.scss";
+//@import "_iconfont.scss";
+@import "_font.scss";
+@import "_reset.scss";
+@import "_common.scss";
+@import "_include.scss";
+
+@import url(https://at.alicdn.com/t/font_1714665_dvpup4mp2ss.css);
+
+
+/* header css */
+.header{
+  @extend .rel;
+
+  z-index: 999;
+
+  .hd_inner{
+    @extend .fix;
+
+    z-index: 999;
+    height: 80px;
+    width: $width;
+    background: transparent;
+
+    &.active{
+      background: $bk;
+    }
+
+    &.red{
+      background: $red;
+    }
+  }
+
+  .hd_logo{
+    max-width: 115px;
+    img{
+      width: 115px;
+    }
+  }
+
+  .top_nav{
+
+    .nav_list{
+      @extend .hei;
+      @extend .flex;
+      @extend .rel;
+      @extend .anim;
+
+      margin: 0 8px;
+      border-bottom: 1px solid transparent;
+
+      &:hover{
+        background: $red;
+
+        >a{
+          color: $wt;
+        }
+
+        .icon-down{
+          transform: rotate(180deg);
+        }
+
+      }
+      &.has_dp:hover{
+
+        border-color: $bk;
+
+        .nav_drop_dowm{
+          display: block;
+        }
+      }
+
+      &.mob_search, &.nav_email, &.home{
+        @extend .none;
+
+        @media screen and (max-width: 1150px){
+          display: flex;
+        }
+      } 
+
+      &.mob_search{
+        width: $width;
+
+        .search_form{
+          width: $width;
+          height: 46px;
+
+          .label_box{
+            @extend .rad5;
+            height: 28px;
+            width: $width;
+            background: $wt;
+            margin: 9px auto;
+
+            input{
+              flex: 1;
+              padding-left: 12px;
+            }
+
+            button{
+              font-family: $fm6;
+              color: $red;
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+
+      &.nav_email a:before{
+        font-size: 21px;
+        margin-right: 10px;
+        margin-top: 4px;
+      }
+
+      @media screen and (max-width: 1150px){
+        width: $width;
+        margin: 0;
+      }
+    }
+
+    a{
+      @extend .anim;
+
+      font-size: $fs2;
+      color: #fff;
+      font-family: $fm2;
+      padding: 10px;
+      
+      .iconfont{
+        @extend .anim;
+
+        font-size: $fs2;
+        margin-left: 4px;
+      }
+
+      @media screen and (max-width: 1150px){
+        width: $width;
+        justify-content: flex-start;
+
+        .iconfont{
+          display: none;
+        }
+      }
+    }
+
+    .nav_drop_dowm{
+      @extend .abs;
+      @extend .anim2;
+      top: calc( 100% + 1px);
+      left: 0;
+      background: $red;
+      padding: 10px;
+      display: none;
+
+      a{
+        @extend .jfs;
+        @extend .ttu;
+        white-space: nowrap;
+        padding: 14px;
+      }
+    }
+
+    @media screen and (max-width: 1150px){
+      position: absolute;
+      top: $width;
+      width: $width;
+      height: calc(100vh - 80px);
+      left: 0;
+      background: $red;
+      flex-direction: column;
+      padding: 16px 2%;
+      display: none;
+
+      &.active{
+        display: flex;
+      }
+      
+    }
+
+  }
+
+  .top_links{
+    width: 120px;
+    flex-shrink: 0;
+
+    i.iconfont{
+      color: $wt;
+      font-size: 18px;
+    }
+
+    .top_menu_btn{
+      @extend .rad0;
+      background: $red;
+      width: 36px;
+      height: 36px;
+
+      &.white{
+        background: $wt;
+
+        .icon-cross{
+          color: $red;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .top_search_btn{
+      @extend .rel;
+    }
+
+    .search_form{
+      @extend .abs;
+      top: $width;
+      right: 0;
+      width: 300px;
+      height: 46px;
+      background: $red;
+      display: none;
+
+      .label_box{
+        @extend .rad5;
+        height: 28px;
+        width: 270px;
+        background: $wt;
+        margin: 9px auto;
+
+        input{
+          flex: 1;
+          padding-left: 12px;
+        }
+
+        button{
+          font-family: $fm6;
+          color: $red;
+          margin: 0 10px;
+        }
+      }
+
+    }
+
+    @media screen and (max-width: 1150px){
+      justify-content: flex-end;
+
+      .top_search_btn, .top_email_btn{
+        display: none;
+      }
+    }
+  }
+}
+
+
+/* banner css */
+.banner_box{
+  @extend .rel;
+
+  .swiper-container-ban{
+    @extend .hide;
+  }
+
+  .ban_list{
+    @extend .rel;
+
+    a{
+      width: $width;
+
+      &.ban{
+        overflow: hidden;
+
+        @media screen and (max-width: 1024px){
+          img{
+            width: 150%;
+            margin-left: 25%;
+          }
+        }
+
+        @media screen and (max-width: 767px){
+          img{
+            width: 200%;
+            margin-left: 50%;
+          }
+        }
+
+        @media screen and (max-width: 600px){
+          img{
+            width: 250%;
+            margin-left: 75%;
+          }
+        }
+
+        @media screen and (max-width: 500px){
+          img{
+            width: 300%;
+            margin-left: 100%;
+          }
+        }
+
+        @media screen and (max-width: 400px){
+          img{
+            width: 350%;
+            margin-left: 125%;
+          }
+        }
+        
+      }
+    }
+
+    .ban_info_box{
+      @extend .abs;
+
+      padding: 100px 0;
+      background: url(../images/in_bg1.png)no-repeat center center/contain;
+
+      h3, p, .ban_btn{
+        @extend .cen;
+
+        color: $wt;
+      }
+
+      h3{
+        font-size: $fs9;
+        font-family: $fm6;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 1150px){
+          font-size: $fs8;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs7;
+        }
+      }
+
+      p{
+        
+        font-size: $fs3;
+        font-family: $fm2;
+        line-height: 2rem;
+
+        @media screen and (max-width: 650px){
+          @include br;
+
+          padding: 0 30px;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs;
+        }
+      }
+
+      .ban_btn{
+        @extend .rad5;
+        @extend .anim;
+
+        width: 200px;
+        padding: 10px 0;
+        border: 1px solid $wt;
+        font-size: $fs5;
+        margin: 40px auto 0;
+
+        &:hover{
+          background: $wt;
+          color: $red;
+          
+        }
+
+        @media screen and (max-width: 1150px){
+          font-size: $fs4;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs;
+          width: 160px;
+        }
+
+      }
+
+      @media screen and (max-width: 600px){
+        padding: 80px 0;
+      }
+    }
+
+  }
+
+  .swiper-pagination-ban{
+    @extend .abs;
+    @extend .hand;
+
+    width: $width;
+    bottom: 20px;
+    height: 10px;
+
+    .swiper-pagination-bullet{
+      @extend .anim;
+
+      width: 37px;
+      height: 4px;
+      background: lighten($clr2, 30%);
+      margin: 0 10px;
+      outline: none;
+
+      &.swiper-pagination-bullet-active{
+        background: $red;
+      }
+    }
+  }
+}
+
+
+/* pro menu */
+.pro_line{
+  margin-bottom: 2%;
+
+  h4{
+    height: 100px;
+    background: lighten($clr6, 5.5%);
+    font-size: $fs5;
+    font-family: $fm6;
+    color: lighten($clr1, 1%);
+    margin-bottom: 46px;
+  }
+
+  .pline_items{
+    @extend .afs;
+    @extend .hide;
+
+    .pline_list{
+      
+      @include pub_list($color: lighten($clr1, 1%));
+
+      >a{
+        img{
+          mix-blend-mode: multiply;
+        }
+      }
+
+      &:hover{
+
+        >a:before{
+          opacity: 1;
+        }
+
+        h5 a, h5 b{
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .swiper-scrollbar-menu{
+
+    width: $width;
+    height: 5px;
+    background: rgba(0,0,0,.1);
+
+    .swiper-scrollbar-drag{
+      @extend .hei;
+      @extend .rad5;
+
+      background: $red;
+    }
+  }
+}
+
+
+/* program css */
+.program_box{
+  margin: 3% auto;
+
+  @include h4_tit($color: lighten($clr1, 1%));
+  @include read_more;
+
+  @media screen and (max-width: 1024px){
+    margin: 60px auto;
+  }
+}
+
+
+/* choose css */
+.choose_box{
+
+  background: url(../images/in_bg2.jpg)no-repeat top center/cover;
+  padding: 95px 0;
+
+  .choose_items_box{
+
+    @extend .jse;
+
+    .iconfont{
+      @extend .rad0;
+      @extend .flex;
+      @extend .anim;
+
+      width: 36px;
+      height: 36px;
+      background: $red;
+      color: $wt;
+      outline: none;
+      margin: 0 1rem;
+
+      &.swiper-button-disabled{
+        opacity: 0.3;
+      }
+
+      @media screen and (max-width: 1024px){
+        width: 30px;
+        height: 30px;
+      }
+
+    }
+  }
+  
+  .choose_hd{
+    @include h4_tit($color: $wt);
+    @extend .cen;
+
+    margin-bottom: 4%;
+    width: $width;
+  }
+
+  .choose_items{
+    @extend .afs;
+    @extend .hide;
+
+    .choose_list{
+      @include pub_list($color: $wt);
+
+      &:hover {
+        h5 a{
+          color: $red;
+        }
+      }
+      
+    }
+  }
+
+
+}
+
+
+/* product recommmend css */
+.pro_recom_box{
+  background: lighten($clr8, 0.5%);
+
+  .recom_sec{
+    @extend .cen;
+
+    padding: 5% 0;
+    
+    .recom_hd{
+      margin-bottom: 3%;
+
+      @include h4_tit($color: lighten($clr1, 1%));
+
+    }
+
+    .recom_items{
+      @extend .wrap;
+    }
+    
+    .recom_list{
+      @include pub_list($color: $red);
+
+      background: lighten($clr6, 5.5%);
+      margin-bottom: 20px;
+
+      >a{
+        @extend .hide;
+
+        max-height: 362px;
+
+        img{
+          @extend .anim;
+        }
+      }
+
+      .pline_info{
+        padding: 0 16px;
+        margin: 20px 0;
+
+        h5{
+          margin-bottom: 0;
+        }
+
+        p{
+          color: lighten($clr1, 1%);
+          text-align: left;
+        }
+      }
+
+      &:hover{
+        >a img{
+          transform: scale(1.2);
+        }
+      }
+      
+    }
+
+    .more_read{
+      @extend .rad5;
+
+      width: 240px;
+      font-size: $fs5;
+      color: $wt;
+      background: $red;
+      padding: 10px 0;
+      margin: 4% auto 0;
+
+    }
+  }
+}
+
+
+/* news exhibition css */
+.exhibition{
+  @extend .afs;
+
+  margin: 3% auto;
+
+  .exhibition_list{
+    @extend .self;
+  }
+
+  .left_pic{
+    width: $wid3;
+    a{
+      @extend .hide;
+
+      img{
+        min-height: 450px;
+      }
+    }
+  }
+
+  .right_cont{
+    @extend .col;
+    @extend .jfs;
+    @include read_more;
+
+    width: $wid8 + $wid10;
+
+    .list_cont_list{
+      margin-bottom: 20px;
+      border-bottom: 1px solid lighten($clr6, 5.5%);
+    }
+
+    h5 a, p{
+      color: $bk;
+    }
+
+    h5 a{
+      @extend .anim;
+      @extend .jfs;
+
+      font-size: $fs5;
+      font-family: $fm6;
+
+      &:hover{
+        color: $red;
+      }
+    }
+
+    time, p{
+      font-family: $fm2;
+      font-size: $fs2;
+    }
+
+    time{
+      @extend .df;
+
+      color: lighten($clr2, 40%);
+      margin: 8px 0 14px;
+    }
+
+    p{
+      font-family: $fm2;
+    }
+
+    .read_more{
+      @extend .jfs;
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+
+/* opinion css */
+.opinion_box{
+  background: url(../images/in_bg3.jpg)no-repeat top center/cover;
+  // background-attachment: fixed;
+  padding: 140px 0 200px;
+
+  .opinion_list{
+
+    width: $wid3;
+
+    h4, p{
+      color: $wt;
+    }
+
+    h4{
+      font-size: $fs7;
+      font-family: $fm6;
+      margin-bottom: 30px;
+    }
+    
+    p{
+      font-size: $fs5;
+      font-family: $fm2;
+      margin: 10px 0;
+    }
+
+    .contact_btn{
+      @extend .rad5;
+
+      width: 240px;
+      padding: 10px 0;
+      background: lighten($clr1, 3.5%);
+      color: $wt;
+      font-size: $fs5;
+      font-family: $fm2;
+      margin-top: 40px;
+
+
+    }
+   
+  }
+}
+
+
+/* parnter css */
+.logo_partner{
+  background: $red;
+  padding: 30px 0;
+
+  .parnter_box{
+    a{
+      margin: 0 20px;
+    }
+  }
+}
+
+
+/* footer css */
+.footer{
+  margin: 3% auto;
+
+  .footer{
+    @extend .afs;
+  }
+  
+  .footer_list{
+    @extend .self;
+  }
+
+  a{
+    @extend .jfs;
+  }
+
+  .fot_logo{
+    margin-bottom: 16px;
+
+    .logo_back{
+      margin-right: 16px;
+    }
+  }
+
+  p{
+    color: lighten($clr1, 1%);
+    margin: 0 0 16px;
+
+    b{
+      @extend .df;
+      margin-bottom: 6px;
+      font-family: $fm6;
+    }
+  }
+
+  .social_item{
+    a{
+      @extend .rad5;
+      @extend .jc;
+
+      width: 36px;
+      height: 36px;
+      background: lighten($clr4, 10.5%);
+      font-size: $fs3;
+      color: $wt;
+      
+    }
+  }
+
+  .fot_nav{
+    a{
+      font-family: $fm6;
+      color: lighten($clr1, 1%);
+      margin-bottom: 16px;
+    }
+  }
+
+  select{
+    border: 1px solid $bk;
+    width: 200px;
+    height: 36px;
+    color: lighten($clr4, 16%)
+  }
+}
+

@@ -1,0 +1,168 @@
+@mixin pub_list($color){
+
+  @extend .self;
+  @extend .df;
+  @extend .jsb;
+  @extend .col;
+
+  width: $wid9;
+
+  >a{
+    @extend .rel;
+
+    // max-width: 444px;
+    max-height: 260px;
+
+    &:before{
+      @extend .abs;
+      @extend .anim;
+
+      content: '';
+      width: $width;
+      height: $width;
+      top: 0;
+      left: 0;
+      background: #5c47db;
+      opacity: 0;
+
+    }
+  }
+
+  .pline_info{
+    margin: 36px 0;
+
+    h5 a, h5 b, p {
+      color: $color;
+    }
+
+    h5{
+      @extend .jfs;
+
+      margin-bottom: 10px;
+
+      a{
+        @extend .anim;
+
+        font-size: $fs3;
+        font-family: $fm6;
+        margin-right: 16px;
+      }
+
+      b{
+        @extend .anim;
+
+        font-family: $fm6;
+        font-size: $fs4;
+      }
+      
+    }
+
+    p{
+      font-family: $fm2;
+      font-size: $fs2;
+      line-height: 1.5rem;
+
+      br{
+        @extend .none;
+      }
+    }
+
+  }
+}
+
+@mixin h4_tit($color){
+
+  h4,p{
+    color: $color;
+  }
+
+  h4{
+    font-family: $fm6;
+    font-size: $fs7;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 800px){
+      @include br;
+    }
+
+    @media screen and (max-width: 500px){
+      font-size: $fs6;
+    }
+  }
+
+  p{
+    font-size: $fs5;
+    font-family: $fm2;
+    line-height: 1.8rem;
+    margin: 1rem 0;
+    padding: 8px 0;
+
+    @media screen and (max-width: 1024px){
+      @include br;
+    }
+
+    @media screen and (max-width: 500px){
+      font-size: $fs4;
+    }
+  }
+}
+
+@mixin read_more{
+  .read_more{
+    margin-top: 3%;
+    span, b{
+      font-size: $fs3;
+      font-family: $fm6;
+    }
+
+    span{
+      @extend .anim;
+
+      color: $bk;
+      margin-right: 14px;
+    }
+
+    b{
+      color: $red;
+    }
+
+    &:hover{
+      span{
+        color: $red;
+        margin-right: 20px;
+      }
+    }
+
+    @media screen and (max-width: 1024px){
+      margin-top: 30px;
+    }
+  }
+}
+
+
+// 自适应用的
+@mixin cent{
+  text-align: $cent;
+}
+@mixin wrap{
+  flex-wrap: wrap;
+}
+@mixin anim1{
+  transition: all .3s;
+}
+@mixin anim2{
+  transition: all .5s;
+}
+@mixin self{
+  align-self: normal;
+}
+@mixin br{
+  br{
+    display: none;
+  }
+}
+@mixin flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

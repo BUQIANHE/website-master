@@ -1,0 +1,1456 @@
+@import "_var.scss";
+//@import "_iconfont.scss";
+@import "_font.scss";
+@import "_reset.scss";
+@import "_common.scss";
+@import "_include.scss";
+
+@import url(https://at.alicdn.com/t/font_1714665_a5hxeuewcd.css);
+
+.page_tit{
+  @include page_tit;
+}
+
+/* header css */
+.header{
+  @extend .rel;
+
+  z-index: 999;
+
+  .hd_inner{
+    @extend .fix;
+
+    z-index: 999;
+    height: 80px;
+    width: $width;
+    background: transparent;
+
+    &.active{
+      background: $bk;
+    }
+
+    &.red{
+      background: $red;
+    }
+  }
+
+  #hd_active{
+    background: $bk;
+  }
+
+  .hd_logo{
+    max-width: 115px;
+    img{
+      width: 115px;
+    }
+  }
+
+  .top_nav{
+
+    .nav_list{
+      @extend .hei;
+      @extend .flex;
+      @extend .rel;
+      @extend .anim;
+
+      margin: 0 8px;
+      border-bottom: 1px solid transparent;
+
+      &:hover{
+        background: $red;
+
+        >a{
+          color: $wt;
+        }
+
+        .icon-down{
+          transform: rotate(180deg);
+        }
+
+      }
+      &.has_dp:hover{
+
+        border-color: $bk;
+
+        .nav_drop_dowm{
+          display: block;
+        }
+      }
+
+      &.mob_search, &.nav_email, &.home{
+        @extend .none;
+
+        @media screen and (max-width: 1150px){
+          display: flex;
+        }
+      } 
+
+      &.mob_search{
+        width: $width;
+
+        .search_form{
+          width: $width;
+          height: 46px;
+
+          .label_box{
+            @extend .rad5;
+            height: 28px;
+            width: $width;
+            background: $wt;
+            margin: 9px auto;
+
+            input{
+              flex: 1;
+              padding-left: 12px;
+            }
+
+            button{
+              font-family: $fm6;
+              color: $red;
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+
+      &.nav_email a:before{
+        font-size: 21px;
+        margin-right: 10px;
+        margin-top: 4px;
+      }
+
+      @media screen and (max-width: 1150px){
+        width: $width;
+        margin: 0;
+      }
+    }
+
+    a{
+      @extend .anim;
+
+      font-size: $fs2;
+      color: #fff;
+      font-family: $fm2;
+      padding: 10px;
+      
+      .iconfont{
+        @extend .anim;
+
+        font-size: $fs2;
+        margin-left: 4px;
+      }
+
+      @media screen and (max-width: 1150px){
+        width: $width;
+        justify-content: flex-start;
+
+        .iconfont{
+          display: none;
+        }
+      }
+    }
+
+    .nav_drop_dowm{
+      @extend .abs;
+      @extend .anim2;
+      top: calc( 100% + 1px);
+      left: 0;
+      background: $red;
+      padding: 10px;
+      display: none;
+
+      a{
+        @extend .jfs;
+        @extend .ttu;
+        white-space: nowrap;
+        padding: 14px;
+      }
+    }
+
+    @media screen and (max-width: 1150px){
+      position: absolute;
+      top: $width;
+      width: $width;
+      height: calc(100vh - 80px);
+      left: 0;
+      background: $red;
+      flex-direction: column;
+      padding: 16px 2%;
+      display: none;
+
+      &.active{
+        display: flex;
+      }
+      
+    }
+
+  }
+
+  .top_links{
+    width: 120px;
+    flex-shrink: 0;
+
+    i.iconfont{
+      color: $wt;
+      font-size: 18px;
+    }
+
+    .top_menu_btn{
+      @extend .rad0;
+      background: $red;
+      width: 36px;
+      height: 36px;
+
+      &.white{
+        background: $wt;
+
+        .icon-cross{
+          color: $red;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .top_search_btn{
+      @extend .rel;
+    }
+
+    .search_form{
+      @extend .abs;
+      top: $width;
+      right: 0;
+      width: 300px;
+      height: 46px;
+      background: $red;
+      display: none;
+
+      .label_box{
+        @extend .rad5;
+        height: 28px;
+        width: 270px;
+        background: $wt;
+        margin: 9px auto;
+
+        input{
+          flex: 1;
+          padding-left: 12px;
+        }
+
+        button{
+          font-family: $fm6;
+          color: $red;
+          margin: 0 10px;
+        }
+      }
+
+    }
+
+    @media screen and (max-width: 1150px){
+      justify-content: flex-end;
+
+      .top_search_btn, .top_email_btn{
+        display: none;
+      }
+    }
+  }
+  
+}
+#heder_active{
+  height: 80px;
+}
+
+
+/* banner css */
+.banner_box{
+  @extend .rel;
+
+  .swiper-container-ban{
+    @extend .hide;
+  }
+
+  .ban_list{
+    @extend .rel;
+
+    a{
+      width: $width;
+
+      &.ban{
+        overflow: hidden;
+
+        @media screen and (max-width: 1024px){
+          img{
+            width: 150%;
+            margin-left: -25%;
+          }
+        }
+
+        @media screen and (max-width: 767px){
+          img{
+            width: 200%;
+            margin-left: -50%;
+          }
+        }
+
+        @media screen and (max-width: 600px){
+          img{
+            width: 250%;
+            margin-left: -75%;
+          }
+        }
+
+        @media screen and (max-width: 500px){
+          img{
+            width: 300%;
+            margin-left: -100%;
+          }
+        }
+
+        @media screen and (max-width: 400px){
+          img{
+            width: 350%;
+            margin-left: -125%;
+          }
+        }
+        
+      }
+    }
+
+    .ban_info_box{
+      @extend .abs;
+
+      padding: 100px 0;
+      background: url(../images/in_bg1.png)no-repeat center center/contain;
+
+      &.page_ban_info{
+        padding: 20px;
+        background: url(../images/page_bg.png)no-repeat center center/contain;
+      }
+
+      h3, p, .ban_btn{
+        @extend .cen;
+
+        color: $wt;
+      }
+
+      h3{
+        font-size: $fs9;
+        font-family: $fm6;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 1150px){
+          font-size: $fs8;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs7;
+        }
+      }
+
+      p{
+        
+        font-size: $fs3;
+        font-family: $fm2;
+        line-height: 2rem;
+
+        @media screen and (max-width: 650px){
+          @include br;
+
+          padding: 0 30px;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs;
+        }
+      }
+
+      .ban_btn{
+        @extend .rad5;
+        @extend .anim;
+
+        width: 200px;
+        padding: 10px 0;
+        border: 1px solid $wt;
+        font-size: $fs5;
+        margin: 40px auto 0;
+
+        &:hover{
+          background: $wt;
+          color: $red;
+          
+        }
+
+        @media screen and (max-width: 1150px){
+          font-size: $fs4;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs;
+          width: 160px;
+        }
+
+      }
+
+      @media screen and (max-width: 600px){
+        padding: 80px 0;
+      }
+    }
+
+    &.pro_ban_list .ban{
+      height: 180px;
+      width: $width;
+      background: $red;
+    }
+
+  }
+
+  .swiper-pagination-ban{
+    @extend .abs;
+    @extend .hand;
+
+    width: $width;
+    bottom: 20px;
+    height: 10px;
+
+    .swiper-pagination-bullet{
+      @extend .anim;
+
+      width: 37px;
+      height: 4px;
+      background: lighten($clr2, 30%);
+      margin: 0 10px;
+      outline: none;
+
+      &.swiper-pagination-bullet-active{
+        background: $red;
+      }
+    }
+  }
+}
+
+
+/* pro menu */
+.pro_line{
+  margin-bottom: 2%;
+
+  h4{
+    @include page_tit;
+  }
+
+  .pline_items{
+    @extend .afs;
+    @extend .hide;
+
+    .pline_list{
+      
+      @include pub_list($color: lighten($clr1, 1%));
+
+      >a{
+        img{
+          mix-blend-mode: multiply;
+        }
+      }
+
+      &:hover{
+
+        >a:before{
+          opacity: 1;
+        }
+
+        h5 a, h5 b{
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .swiper-scrollbar-menu{
+
+    width: $width;
+    height: 5px;
+    background: rgba(0,0,0,.1);
+
+    .swiper-scrollbar-drag{
+      @extend .hei;
+      @extend .rad5;
+
+      background: $red;
+    }
+  }
+
+  &.product_line{
+    margin-top: 2%;
+  }
+}
+
+
+/* program css */
+.program_box{
+  margin: 3% auto;
+
+  @include h4_tit($color: lighten($clr1, 1%));
+  @include read_more;
+
+  h4.red{
+    color: $red;
+  }
+
+  hr{
+    width: 150px;
+    opacity: 0.5;
+    margin: 3% auto 0;
+  }
+
+  @media screen and (max-width: 1024px){
+    margin: 60px auto;
+  }
+}
+
+
+/* choose css */
+.choose_box{
+
+  background: url(../images/in_bg2.jpg)no-repeat top center/cover;
+  padding: 95px 0;
+
+  .choose_items_box{
+
+    @extend .jse;
+
+    .iconfont{
+      @extend .rad0;
+      @extend .flex;
+      @extend .anim;
+
+      width: 36px;
+      height: 36px;
+      background: $red;
+      color: $wt;
+      outline: none;
+      margin: 0 1rem;
+
+      &.swiper-button-disabled{
+        opacity: 0.3;
+      }
+
+      @media screen and (max-width: 1024px){
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+      }
+
+      @media screen and (max-width: 767px){
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+        flex-shrink: 0;
+        font-size: 14px;
+      }
+
+    }
+  }
+  
+  .choose_hd{
+    @include h4_tit($color: $wt);
+    @extend .cen;
+
+    margin-bottom: 4%;
+    width: $width;
+  }
+
+  .choose_items{
+    @extend .afs;
+    @extend .hide;
+
+    .choose_list{
+      @include pub_list($color: $wt);
+
+      &:hover {
+        h5 a{
+          color: $red;
+        }
+      }
+      
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+    padding: 80px 0;
+  }
+
+}
+
+
+/* product recommmend css */
+.pro_recom_box{
+  background: lighten($clr8, 0.5%);
+
+  .recom_sec{
+    @extend .cen;
+
+    padding: 5% 0;
+    
+    .recom_hd{
+      margin-bottom: 3%;
+
+      @include h4_tit($color: lighten($clr1, 1%));
+
+      &.product_hd{
+        margin: 0;
+        
+        h5, p, p b{
+          color: lighten($clr1, 1%);
+        }
+
+        h5, p b{
+          font-family: $fm6;
+        }
+
+        h5{
+          font-size: $fs3;
+        }
+
+        p, p b{
+          font-family: $fm2;
+          font-size: $fs2;
+        }
+      }
+
+    }
+
+    .recom_items{
+      @extend .wrap;
+      @extend .jfs;
+    }
+    
+    .recom_list{
+      @include pub_list($color: $red);
+
+      background: lighten($clr6, 5.5%);
+      margin-bottom: 20px;
+      width: $wid9;
+
+      >a{
+        @extend .hide;
+
+        max-height: 362px;
+
+        img{
+          @extend .anim;
+        }
+      }
+
+      .pline_info{
+        padding: 0 16px;
+        margin: 20px 0;
+
+        h5{
+          margin-bottom: 0;
+        }
+
+        p{
+          color: lighten($clr1, 1%);
+          text-align: left;
+        }
+      }
+
+      &:hover{
+        >a img{
+          transform: scale(1.2);
+        }
+      }
+
+      &:not(:nth-child(4n)){
+        margin-right: calc( 4% / 3 );
+      }
+
+      &.pro_det_list{
+        a{
+          border: 1px solid lighten($clr6, 5.5%);
+        }
+      }
+
+      @media screen and (max-width: 950px){
+        width: $wid6;
+
+        &:not(:nth-child(4n)){
+          margin-right: 0;
+        }
+
+        &:not(:nth-child(3n)){
+          margin-right: 2%;
+        }
+      }
+
+      @media screen and (max-width: 600px){
+        width: $wid4;
+
+        &:not(:nth-child(3n)){
+          margin-right: 0;
+        }
+
+        &:not(:nth-child(2n)){
+          margin-right: 2%;
+        }
+      }
+      
+    }
+
+    .more_read{
+      @extend .rad5;
+
+      width: 240px;
+      font-size: $fs5;
+      color: $wt;
+      background: $red;
+      padding: 10px 0;
+      margin: 4% auto 0;
+
+      @media screen and (max-width: 500px){
+        font-size: $fs4;
+        width: 200px;
+      }
+
+    }
+
+    &.product_section{
+      padding: 0 0 3%;
+    }
+
+    @media screen and (max-width: 600px){
+      padding: 40px 0;
+    }
+  }
+
+  &.product_recommend{
+    background: $wt;
+  }
+}
+
+
+/* news exhibition css */
+.exhibition{
+  @extend .afs;
+
+  margin: 3% auto;
+
+  .left_pic{
+    width: $wid3;
+    a{
+      @extend .hide;
+
+      img{
+        min-height: 450px;
+        width: auto;
+
+        @media screen and (max-width: 1100px){
+          min-height: unset;
+        }
+      }
+    }
+  }
+
+  .right_cont{
+    @extend .col;
+    @extend .jfs;
+    @include read_more;
+    @include news;
+
+    width: $wid8 + $wid10;
+
+    .list_cont_list{
+      margin-bottom: 20px;
+      border-bottom: 1px solid lighten($clr6, 5.5%);
+    }
+
+    .read_more{
+      @extend .jfs;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .exhibition_list{
+    @extend .self;
+
+    @media screen and (max-width: 767px){
+      width: $width;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    @include wrap;
+  }
+}
+
+
+/* opinion css */
+.opinion_box{
+  background: url(../images/in_bg3.jpg)no-repeat top center/cover;
+  // background-attachment: fixed;
+  padding: 140px 0 200px;
+
+  .opinion_list{
+
+    width: $wid3;
+
+    h4, p{
+      color: $wt;
+    }
+
+    h4{
+      font-size: $fs7;
+      font-family: $fm6;
+      margin-bottom: 30px;
+    }
+    
+    p{
+      font-size: $fs5;
+      font-family: $fm2;
+      margin: 10px 0;
+    }
+
+    .contact_btn{
+      @extend .rad5;
+
+      width: 240px;
+      padding: 10px 0;
+      background: lighten($clr1, 3.5%);
+      color: $wt;
+      font-size: $fs5;
+      font-family: $fm2;
+      margin-top: 40px;
+
+
+    }
+
+    @media screen and (max-width: 1024px){
+      width: $width;
+    }
+   
+  }
+}
+
+
+/* parnter css */
+.logo_partner{
+  background: $red;
+  padding: 20px 0;
+
+  .parnter_box{
+    @extend .wrap;
+
+    a{
+      margin: 10px 20px;
+    }
+  }
+}
+
+
+/* footer css */
+.footer{
+  margin: 3% auto;
+
+  .footer{
+    @extend .afs;
+    @extend .wrap;
+  }
+  
+  .footer_list{
+    @extend .self;
+
+    margin: 10px 0;
+
+    @media screen and (max-width: 500px){
+      width: $width;
+
+      &:first-child{
+        width: auto;
+      }
+    }
+  }
+
+  a{
+    @extend .jfs;
+  }
+
+  .fot_logo{
+    margin-bottom: 16px;
+
+    .logo_back{
+      margin-right: 16px;
+    }
+  }
+
+  p{
+    color: lighten($clr1, 1%);
+    margin: 0 0 16px;
+
+    b{
+      @extend .df;
+      margin-bottom: 6px;
+      font-family: $fm6;
+    }
+  }
+
+  .social_item{
+    a{
+      @extend .rad5;
+      @extend .jc;
+
+      width: 36px;
+      height: 36px;
+      background: lighten($clr4, 10.5%);
+      font-size: $fs3;
+      color: $wt;
+      
+    }
+  }
+
+  .fot_nav{
+    a{
+      font-family: $fm6;
+      color: lighten($clr1, 1%);
+      margin-bottom: 16px;
+    }
+  }
+
+  select{
+    border: 1px solid $bk;
+    width: 200px;
+    height: 36px;
+    color: lighten($clr4, 16%)
+  }
+}
+
+
+/* download css */
+.down_items{
+  @extend .afs;
+  @extend .wrap;
+
+  margin: 3% auto;
+
+  .down_list{
+    @extend .self;
+    @extend .afs;
+    @extend .jfs;
+
+    width: $wid5;
+    padding-bottom: 20px; 
+    margin-bottom: 30px;
+    border-bottom: 1px solid lighten($clr6, 5.5%);
+
+    .left_pic{
+      max-width: 230px;
+      max-height: 134px;
+    }
+
+    .right_cont{
+      margin-left: 30px;
+
+      h5{
+        font-size: $fs5;
+        font-family: $fm6;
+        color: lighten($clr1, 1%);
+        margin-bottom: 2%;
+
+        @media screen and (max-width: 1024px){
+          font-size: $fs4;
+        }
+
+        @media screen and (max-width: 500px){
+          font-size: $fs3;
+        }
+      }
+      
+      .size{
+        font-family: $fm2;
+        font-size: $fs2;
+        color: lighten($clr2, 40%);
+      }
+
+      .down_btn{
+        @extend .jfs;
+        
+        margin-top: 5%;
+
+        b{
+          font-family: $fm6;
+          color: lighten($clr1, 1%);
+          font-size: $fs3;
+
+          @media screen and (max-width: 500px){
+            font-size: $fs;
+          }
+        }
+
+        .icon-xiazai{
+          font-weight: 600;
+          color: $red;
+          font-size: $fs4;
+          margin-left: 10px;
+        }
+      }
+
+      @media screen and (max-width: 1024px){
+        margin-left: 20px;
+      }
+
+      
+    }
+
+    .dlist_info{
+      @extend .self;
+
+      @media screen and (max-width: 500px){
+        width: $wid5;
+      }
+
+    }
+
+    @media screen and (max-width: 850px){
+      width: $width;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: 850px){
+    @include wrap;
+  }
+}
+
+
+/* contact css */
+.contact_info{
+  @extend .afs;
+  @extend .wrap;
+
+  margin: 3% auto;
+
+  .contct_list{
+    @extend .self;
+    @include h4_tit($color: lighten($clr1, 1%));
+
+    margin-bottom: 20px;
+
+    p{
+      b,span{
+        display: block; 
+        font-size: $fs2;
+      }
+
+      b{
+        @extend .ttu;
+        
+        font-family: $fm6;
+      }
+
+      span{
+        font-family: $fm2;
+        line-height: 1rem;
+      }
+    }
+
+    a{
+      @extend .rad5;
+      @extend .jfs;
+
+      background: lighten($clr2, 1%);
+      padding: 10px 20px;
+      width: 260px;
+      color: $wt;
+      font-weight: 300;
+      margin-bottom: 20px;
+
+      &:before{
+        font-size: $fs4;
+        margin-right: 6px;
+        margin-top: 4px;
+      }
+    }
+
+    @media screen and (max-width: 1024px){
+      width: $wid5;
+    }
+
+    @media screen and (max-width: 767px){
+      width: $width;
+    }
+  }
+}
+.contact_map{
+  @extend .hide;
+
+  @media screen and (max-width: 1024px){
+    img{ 
+      width: 150%;
+      margin-left: -4%;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    img{ 
+      width: 200%;
+      margin-left: -2%;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    img{ 
+      width: 250%;
+      margin-left: -2%;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    img{ 
+      width: 300%;
+      margin-left: -2%;
+    }
+  }
+}
+
+
+/* about css */
+.pic_txt_box{
+  margin: 3% auto;
+
+  .plist_pic{
+    width: $wid3;
+
+    video{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .plist_txt{
+    @include h4_tit($color: lighten($clr1, 1%));
+
+    width: 46%;
+
+    h4{
+      margin-bottom: 30px;
+
+      &.red{
+        color: $red;
+      }
+    }
+
+    p.bold{
+      font-family: $fm6;
+      line-height: 2rem;
+
+      @media screen and (max-width: 1320px){
+        @include br;
+      }
+    }
+    
+  }
+
+  &.reverse{
+    flex-direction: row-reverse;
+
+    p{
+      @media screen and (max-width: 1320px){
+        @include br;
+      }
+      
+      &.small{
+        font-size: $fs3;
+
+        @media screen and (max-width: 1320px){
+          @include br;
+        }
+      }
+    }
+  }
+
+  .pic_txt_list{
+    @media screen and (max-width: 950px){
+      width: $width;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 950px){
+    @include wrap;
+  }
+}
+.production_box{
+  @include h4_tit($color: $wt);
+  @extend .cen;
+
+  background: $red;
+  padding: 4% 0;
+  margin-bottom: 60px;
+
+  h4{
+    margin-bottom: 30px;
+  }
+
+  p{
+    margin: 1rem auto;
+    line-height: 2rem;
+    font-family: $fm2;
+  }
+
+  &.support{
+    background: url(../images/sup_ban2.jpg)no-repeat top center/cover;
+    background-attachment: fixed;
+  }
+
+  @media screen and (max-width: 950px){
+    padding: 80px 0;
+  }
+}
+
+
+/* news css */
+.news_box{
+  margin: 3% 0 5%;
+  width: $width;
+  border-top: 2px solid lighten($clr6, 5.5%);
+
+  .news_items{
+    @extend .wrap;
+  }
+
+  .news_list{
+    @include news;
+    @include read_more;
+    @extend .anim;
+
+    width: 45%;
+    padding: 3% 10px;
+    border-bottom: 1px solid lighten($clr6, 5.5%);
+
+    &:hover{
+      background: lighten($clr6, 5.5%);
+
+      h5 a, .read_more span{
+        color: $red;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      width: $width;
+    }
+
+  }
+}
+.news_det_box{
+  @include news;
+  
+  h5.ttu>a, time{
+    @extend .jc;
+  }
+
+  .news_det{
+    margin: 3% 0;
+
+    &.news_det_pic{
+      margin: 5% 0;
+      img{
+        width: 60%;
+
+        @media screen and (max-width: 767px){
+          width: $width;
+        }
+      }
+
+      @media screen and (max-width: 767px){
+        margin: 50px 0;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      margin: 40px 0;
+    }
+  }
+}
+
+
+/* pro det css */
+.det_main_info{
+  @extend .afs;
+  
+  margin: 3% auto 6%;
+
+  .left_pic{
+    width: 45%;
+    border: 1px solid lighten($clr6, 5.5%);
+  }
+
+  .right_cont{
+    width: $wid3;
+
+    .model, .pro_mn{
+      font-family: $fm6;
+    }
+
+    .model{
+      font-size: $fs5;
+      color: $red;
+    }
+
+    .pro_mn{
+      font-size: $fs7;
+      color: lighten($clr1, 1%);
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 1200px){
+        font-family: $fm6;
+      }
+    }
+
+    a{
+      @extend .jfs;
+      img{
+        width: auto;
+      }
+
+      &.line_draft img{
+        @media screen and (max-width: 1200px){
+          width: $wid3;
+        }
+      }
+    }
+
+    p{
+      font-family: $fm2;
+      font-size: $fs3;
+      color: lighten($clr1, 1%);
+      margin: 20px 0;
+    }
+
+    .det_btn{
+      @extend .jfs;
+      margin-top: 30px;
+
+      .iconfont{
+        @extend .rad5;
+
+        padding: 10px 20px;
+        font-weight: 700;
+        color: $wt;
+        margin-right: 20px;
+
+        &:before{
+          font-weight: 400;
+          margin-right: 8px;
+          font-size: $fs4;
+        }
+
+        &.icon-fax{
+          width: 180px;
+          background: lighten($clr1, 1%);
+        }
+
+        &.icon-youxiangicon{
+          width: 200px;
+          background: $red;
+        }
+      }
+    }
+  }
+
+  .det_info_list{
+    @media screen and (max-width: 950px){
+      width: $width;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: 950px){
+    @include wrap;
+  }
+}
+.details{
+  padding: 10px 0 50px;
+
+  a{
+    @extend .jfs;
+    margin-bottom: 30px;
+  }
+
+  img{
+    width: auto;
+
+    @media screen and (max-width: 1200px){
+      width: 60%;
+    }
+
+    @media screen and (max-width: 767px){
+      width: $width;
+    }
+  }
+
+  p{
+    font-family: $fm2;
+    color: lighten($clr1, 1%);
+    font-size: $fs2;
+
+    @media screen and (max-width: 1050px){
+      @include br;
+    }
+  }
+
+}
+
+/* page css */
+.pager{
+  width: 30%;
+  margin: 3% auto 2%;
+  padding: 4px;
+
+  li.iconfont{
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+    background: $red;
+
+    &.disabled{
+      background: lighten($clr1, 1%);
+
+      &:before{
+        color: $wt;
+      }
+    }
+
+    &:before{
+      @extend .anim;
+
+      color: $wt;
+    }
+  }
+  .num_list{
+    width: 80%;
+
+    a{
+      font-size: $fs3;
+      font-family: $fm2;
+      color: #4d4d4d;
+      margin: 0 8px;
+      
+      &.active, &:hover{
+        color: $red;
+      }
+    }
+  }
+  @media screen and (max-width: 950px){
+    width: 45%;
+  }
+  @media screen and (max-width: 850px){
+    width: 60%;
+  }
+  @media screen and (max-width: 500px){
+    width: 80%;
+    li.iconfont{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
